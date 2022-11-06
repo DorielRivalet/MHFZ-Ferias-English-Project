@@ -13,6 +13,7 @@
   --scrollbar:#89b4fa !important;
   --scrollbar-bg: #11111b !important;
   --submenu-color: #313244 !important;
+  --border-color:#6c7086 !important;
 }
 
 select{
@@ -133,6 +134,8 @@ div::-webkit-scrollbar-thumb {
   border-radius: 20px;       /* roundness of the scroll thumb */
   /* border: 3px solid orange;  creates padding around scroll thumb */
 }
+
+th,td {border:2px ridge var(--border-color) !important;}
 /* mouse over link
 a:hover {
   color: var(--link-hover) !important;
