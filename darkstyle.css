@@ -1,0 +1,200 @@
+:root {
+  transition: color 300ms, background-color 300ms;
+	--primary-color: #bac2de !important;
+	--text-color: #cdd6f4 !important;
+	--bg-color: #1e1e2e !important;
+	--component-bg-color: #181825 !important;
+  --link: #89b4fa !important;
+  --link-visited: #cba6f7 !important;
+  --link-hover: #b4befe !important;
+  --link-active: #74c7ec !important;
+  --select: #bac2de !important;
+  --select-bg-color: #313244 !important;
+  --scrollbar:#89b4fa !important;
+  --scrollbar-bg: #11111b !important;
+  --submenu-color: #313244 !important;
+}
+
+select{
+  color:var(--select) !important;
+  background-color: var(--select-bg-color) !important;
+}
+
+tr.l td{
+  color:var(--select) !important;
+  background-color: var(--select-bg-color) !important;
+}
+
+li>select{
+  color:var(--select) !important;
+  background-color: var(--select-bg-color) !important;
+}
+/* *{
+  background-color: #0072a3 !important;
+} */
+#rightFrame{
+  color:var(--text-color) !important;
+  background-color: var(--bg-color) !important;
+  transition: color 300ms, background-color 300ms;
+}
+
+#leftFrame{
+  color:var(--text-color) !important;
+  background-color: var(--bg-color) !important;
+  transition: color 300ms, background-color 300ms;
+}
+
+html{
+  transition: color 300ms, background-color 300ms;
+}
+
+/* unvisited link */
+a:link {
+  color: var(--link) !important;
+}
+
+#tree a:link {
+  color: var(--link) !important;
+}
+
+td div a:link{
+  color: var(--link) !important;
+}
+
+
+tr td a:link{
+  color: var(--link) !important;
+}
+
+#tree span{
+  color: var(--link) !important;
+}
+
+/* visited link */
+a:visited {
+  color: var(--link-visited) !important;
+}
+
+#tree{
+  color: var(--text-color) !important;
+  background-color: var(--bg-color) !important;
+  transition: color 300ms, background-color 300ms;
+}
+
+a{
+  color: var(--text-color) !important;
+}
+
+th{
+  background-color:var(--submenu-color) !important;
+  color: var(--text-color) !important;
+}
+
+td{
+  color: var(--text-color) !important;
+  background-color: var(--bg-color) !important;
+  transition: color 300ms, background-color 300ms;
+}
+
+li{
+  color:var(--text-color) !important;
+}
+
+/* html:not([lang*=""]) table, html:not([lang*=""]) td, html:not([lang*=""]) th {
+  color:var(--text-color) !important;
+} */
+
+body::-webkit-scrollbar {
+  width: 6px !important;               /* width of the entire scrollbar */
+  height: 6px !important;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  /* border: 3px solid orange;  creates padding around scroll thumb */
+}
+/* mouse over link
+a:hover {
+  color: var(--link-hover) !important;
+}
+
+/* selected link 
+a:active {
+  color: var(--link-active) !important;
+} */
+
+body {
+  transition: color 300ms, background-color 300ms;
+  background-color: var(--bg-color) !important
+}
+.component {
+  transition: color 300ms, background-color 300ms;
+  background-color: var(--component-bg-color) !important;
+  color: var(--text-color) !important;
+  /* border: 1px solid var(--primary-color); */
+}
+
+h2,h1,h3,h4,h5,h6 {
+  transition: color 300ms, background-color 300ms;
+  color: var(--primary-color) !important;
+}
+
+p {
+  color: var(--text-color) !important;
+}
+
+/* Helper CSS */
+/* body > div {
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  padding: 20px;
+} */
+
+div{
+  color:var(--text-color) !important;
+}
+
+input{
+  color:var(--text-color) !important;
+  background-color: var(--submenu-color) !important;
+}
+
+span.box{
+    color:var(--text-color) !important;
+    background-color:var(--submenu-color) !important;
+}
+
+.r {color:#f38ba8 !important;}
+.b {color:#89b4fa !important;}
+.w {color:white !important;}
+.y {color:#f9e2af !important;}
+.g {color:lime !important;}
+.a {color:aqua !important;}
+.p {color:fuchsia !important;}
+.c {color:pink !important;}
+.C {color:green !important;} /*HC*/
+.B {color:#89b4fa !important;} /*親方*/
+.D,.E,.G,.H,.I,.J {color:#f38ba8 !important;} /*剛種系*/
+.K,.L,.M {color:goldenrod !important;} /*G級*/
+.s{background-color: #6c7086 !important; color: #6c7086 !important;}
+
+.l1i {background-color:lavenderblush;color:var(--bg-color) !important;}
+.l3- {background-color:lightgreen;color:var(--bg-color) !important;}
+.l4k,l5p {background-color:lavender;color:var(--bg-color) !important;}
+.l4g {background-color:aqua;color:var(--bg-color) !important;}
+.l5- {background-color:khaki;color:var(--bg-color) !important;}
+
+/* .darkEdition {
+  background-color: #020c1b !important;
+}
+
+.lightEdition {
+  background-color: #ffffff !important;
+}
+

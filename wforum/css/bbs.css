@@ -1,3 +1,5 @@
+@import url(../darkstyle.css);
+
 body,td,th {
 	background: #f0f0f0;
 	color: #003264;
@@ -7,11 +9,11 @@ a:hover {
 	text-decoration: underline;
 	color: #dd0000;
 }
-/* ƒƒCƒ“‹L–”Ô†F */
+/* ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½Ôï¿½ï¿½F */
 span.num {
 	color: #008000;
 }
-/* ŒŸõE‰ß‹ƒƒO‰æ–Êƒ^ƒCƒgƒ‹”wŒiF */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½Eï¿½ß‹ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½Êƒ^ï¿½Cï¿½gï¿½ï¿½ï¿½wï¿½iï¿½F */
 div.obi {
 	text-align: center;
 	padding: 2px;
@@ -42,12 +44,12 @@ img.capt {
 td.small {
 	font-size: 75%;
 }
-/* Œf¦”Âƒ^ƒCƒgƒ‹ */
+/* ï¿½fï¿½ï¿½ï¿½Âƒ^ï¿½Cï¿½gï¿½ï¿½ */
 h1 {
 	font-size: 200%;
 	margin-bottom: 0;
 }
-/* ’†‰›Šñ‚¹ */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 div.main {
 	text-align: center;
 }
@@ -55,7 +57,7 @@ div.main {
 div.clear {
 	clear: both;
 }
-/* ƒƒCƒ“‹L–‘•ü */
+/* ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 div.art {
 	width: 92%;
 	background: #fff;
@@ -64,24 +66,24 @@ div.art {
 	border: 1px solid gray;
 	margin: 1.2em auto;
 }
-/* ƒƒCƒ“‹L–ƒ^ƒCƒgƒ‹ */
+/* ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½^ï¿½Cï¿½gï¿½ï¿½ */
 div.art strong {
 	color: #008000;
 }
 .ta-r {
 	text-align: right !important;
 }
-/* ‰ÆƒAƒCƒRƒ“ˆÊ’u */
+/* ï¿½ÆƒAï¿½Cï¿½Rï¿½ï¿½ï¿½Ê’u */
 img.icon {
 	vertical-align: middle;
 	border: none;
 	margin: 0 2px;
 }
-/* “Šeƒ{ƒ^ƒ“ */
+/* ï¿½ï¿½ï¿½eï¿½{ï¿½^ï¿½ï¿½ */
 input.btn {
 	width: 110px;
 }
-/* ƒAƒNƒZƒX§ŒÀ—p */
+/* ï¿½Aï¿½Nï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½p */
 table.enter {
 	margin:80px auto;
 	width:400px;

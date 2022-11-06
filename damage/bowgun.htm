@@ -6,9 +6,9 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <style type="text/css">
 <!--
-table.top td {color:blue;cursor:pointer;}
+table.top td {color:#89b4fa;cursor:pointer;}
 #gun {text-align:center;}
-#gun .dai {background-color:silver;}
+#gun .dai {background-color:#6c7086;}
 -->
 </style>
 </head>
@@ -244,7 +244,7 @@ document.getElementById("wpso").firstChild.nodeValue = eq[I_aRELO] + ":" + RELOA
 document.getElementById("wphan").firstChild.nodeValue = eq[I_aKICK] + ":" + KICKNAME[eq[I_aKICK]];
 //弾
 for (i=0; i <= 31; i++) {
-	document.getElementById("d"+i+"t").innerHTML = eq[I_aGUN+i] > 0 ? eq[I_aGUN+i] : eq[I_aGUN+i] < 0 ? "<span style='color:red;'>"+ Ma(eq[I_aGUN+i]) +"</span>" : "<br>";
+	document.getElementById("d"+i+"t").innerHTML = eq[I_aGUN+i] > 0 ? eq[I_aGUN+i] : eq[I_aGUN+i] < 0 ? "<span style='color:#f38ba8;'>"+ Ma(eq[I_aGUN+i]) +"</span>" : "<br>";
 }
 //会心
 document.getElementById("d_cri").firstChild.nodeValue = eq[I_aCRI];
@@ -261,10 +261,10 @@ for (var i=0;i<= 31;i++) {
 	if (eq[I_aGUN+i] !== "0") {
 		//リロード
 		wk = document.getElementById("k"+i+"r").firstChild.nodeValue - eq[I_aRELO] - souten;
-		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":Very Fast</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":Very Slow</span>" : wk + ":Normal";
+		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:#89b4fa'>" + wk + ":Very Fast</span>" : wk >= 8 ? "<span style='color:#f38ba8'>" + wk + ":Very Slow</span>" : wk + ":Normal";
 		//反動
 		wk = rensya === "0" ? document.getElementById("k"+i+"h").firstChild.nodeValue - eq[I_aKICK] - handou : document.getElementById("k"+i+"h").firstChild.nodeValue;
-		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":Smaller</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":Very Large</span>" : wk + ":Medium";
+		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:#89b4fa'>" + wk + ":Smaller</span>" : wk >= 11 ? "<span style='color:#f38ba8'>" + wk + ":Very Large</span>" : wk + ":Medium";
 		document.getElementById("d"+i+"r").parentNode.style.display = "";
 	} else {
 		document.getElementById("d"+i+"r").firstChild.nodeValue= document.getElementById("d"+i+"h").firstChild.nodeValue = "";
@@ -280,10 +280,10 @@ if (CLASSTYPE.Gosyu.indexOf(eq[I_aCLASS]) >= 0){
 		i=35; //Heat Bomb
 		//リロード
 		wk = document.getElementById("k"+i+"r").firstChild.nodeValue - eq[I_aRELO];
-		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":Very Fast</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":Very Slow</span>" : wk + ":Normal";
+		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:#89b4fa'>" + wk + ":Very Fast</span>" : wk >= 8 ? "<span style='color:#f38ba8'>" + wk + ":Very Slow</span>" : wk + ":Normal";
 		//反動
 		wk = document.getElementById("k"+i+"h").firstChild.nodeValue - eq[I_aKICK];
-		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":Smaller</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":Very Large</span>" : wk + ":Medium";
+		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:#89b4fa'>" + wk + ":Smaller</span>" : wk >= 11 ? "<span style='color:#f38ba8'>" + wk + ":Very Large</span>" : wk + ":Medium";
 		document.getElementById("d"+i+"r").parentNode.style.display = "";
 	}
 }
@@ -297,19 +297,19 @@ if (eq[I_aCLASS] === CLASSTYPE.Sinka){
 	}
 		//リロード
 		wk = document.getElementById("k"+i+"r").firstChild.nodeValue - eq[I_aRELO] - souten;
-		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":Very Fast</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":Very Slow</span>" : wk + ":Normal";
+		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:#89b4fa'>" + wk + ":Very Fast</span>" : wk >= 8 ? "<span style='color:#f38ba8'>" + wk + ":Very Slow</span>" : wk + ":Normal";
 		//反動
 		wk = rensya === "0" ? document.getElementById("k"+i+"h").firstChild.nodeValue - eq[I_aKICK] - handou : document.getElementById("k"+i+"h").firstChild.nodeValue;
-		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":Smaller</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":Very Large</span>" : wk + ":Medium";
+		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:#89b4fa'>" + wk + ":Smaller</span>" : wk >= 11 ? "<span style='color:#f38ba8'>" + wk + ":Very Large</span>" : wk + ":Medium";
 		document.getElementById("d"+i+"r").parentNode.style.display = "";
 	if (eq[I_aNAME].indexOf("弩【煌然】") > 0){
 		i = 32; //Acid S
 		//リロード
 		wk = document.getElementById("k"+i+"r").firstChild.nodeValue - eq[I_aRELO] - souten;
-		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":Very Fast</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":Very Slow</span>" : wk + ":Normal";
+		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:#89b4fa'>" + wk + ":Very Fast</span>" : wk >= 8 ? "<span style='color:#f38ba8'>" + wk + ":Very Slow</span>" : wk + ":Normal";
 		//反動
 		wk = rensya === "0" ? document.getElementById("k"+i+"h").firstChild.nodeValue - eq[I_aKICK] - handou : document.getElementById("k"+i+"h").firstChild.nodeValue;
-		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":Smaller</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":Very Large</span>" : wk + ":Medium";
+		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:#89b4fa'>" + wk + ":Smaller</span>" : wk >= 11 ? "<span style='color:#f38ba8'>" + wk + ":Very Large</span>" : wk + ":Medium";
 		document.getElementById("d"+i+"r").parentNode.style.display = "";
 	}
 }

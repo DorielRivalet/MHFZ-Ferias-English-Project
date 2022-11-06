@@ -4,445 +4,464 @@
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
-<style type="text/css">
+<link rel="stylesheet" href="./darkstyle.css"/>
+<!-- <link rel="stylesheet" href="./mainstyle.css"> -->
 <!--
-.l{ background-color: silver; }
+.l{ background-color: #6c7086; }
 caption {text-align:left;font-size:medium;font-weight:bold;padding-bottom:0}
 table.cal td {text-align:center;}
 td {border-color:#c0c0c0;} /*FF,Operaの罫線対応*/
-a:link,a:visited {color:blue;}
-a:hover {color:red;}
+a:link,a:visited {color:#89b4fa;}
+a:hover {color:#f38ba8;}
 a:active {color:black;}
-.al,.al a:link,.al a:visited {color:red;}
+.al,.al a:link,.al a:visited {color:#f38ba8;}
 .sen1 {border-left:1px solid silver;}
 .sen2 {border-left:2px solid silver;}
 -->
 </style>
 <title>表紙</title>
 <base target="_blank">
+<script defer src="./theme.js"></script>
+<!-- <script defer>
+	/* create the link element */
+const linkElement = document.createElement('link');
+
+/* add attributes */
+linkElement.setAttribute('rel', 'stylesheet');
+linkElement.setAttribute('href', './darkstyle.css');
+
+/* attach to the document head */
+document.getElementsByTagName('head')[0].appendChild(linkElement);
+</script> -->
 </head>
 <body>
-<p>This page is the database of
-<br>Monster Hunter Frontier Team FreeDom
-</p><p>
-Translated by Deerby and Supream, with help from the MHFZ community.</p><p>
-IE8/IE11/Firefox25/GoogleChrome30 で表示確認しています。<small>白さが眩しいＨＰです＞＜P</small>
-<span id="ie8"></span>
-<div style="color:red;font-weight:boldw;">MHF-Z has been officially shut down.</div>
-<div style="color:crimson;" id="RealtimeCountdownArea"></div>
-<!--<br>現状<span style="color:crimson;">G5</span>前後の情報です。-->
+	<div class="component">
+		<!-- <button onclick="switchTheme('light')">Light</button>
+		<button onclick="switchTheme('dark')">Dark</button> -->
+		<p>This page is the database of
+		<br>Monster Hunter Frontier Team FreeDom
+		</p><p>
+		Translated by Deerby and Supream, with help from the MHFZ community.</p><p>
+		IE8/IE11/Firefox25/GoogleChrome30 で表示確認しています。<small>白さが眩しいＨＰです＞＜P</small>
+		<span id="ie8"></span>
+		<div style="color: #f38ba8;font-weight:boldw;">MHF-Z has been officially shut down.</div>
+		<div style="color:crimson;" id="RealtimeCountdownArea"></div>
+		<!--<br>現状<span style="color:crimson;">G5</span>前後の情報です。-->
 
-<div id="calendar" style="float:left;"></div>
-<!--<div style="clear: both;"><strong>・狩人祭</strong>
-<div style="font-size:80%;">
-<table border=1 cellspacing=0 cellpadding=2 style="float:left">
-<tr class=l><th colspan=2>狩猟</th></tr>
-<tr><td>ドスランポス</td><td>1魂</td></tr>
-<tr><td>ドスファンゴ</td><td>1魂</td></tr>
-<tr><td>イャンクック</td><td>2魂</td></tr>
-<tr><td>イャンクック亜種</td><td>2魂</td></tr>
-<tr><td>ドスガレオス</td><td>3魂</td></tr>
-<tr><td>ゲリョス</td><td>3魂</td></tr>
-<tr><td>ゲリョス亜種</td><td>4魂</td></tr>
-<tr><td>ダイミョウザザミ</td><td>4魂</td></tr>
-<tr><td>ショウグンギザミ</td><td>4魂</td></tr>
-<tr><td>バサルモス</td><td>5魂</td></tr>
-<tr><td>ババコンガ</td><td>5魂</td></tr>
-<tr><td>ゴゴモア</td><td>5魂</td></tr>
-<tr><td>リオレイア</td><td>5魂</td></tr>
-<tr><td>リオレイア亜種</td><td>5魂</td></tr>
-<tr><td>フルフル</td><td>5魂</td></tr>
-<tr><td>フルフル亜種</td><td>5魂</td></tr>
-<tr><td>ヒプノック</td><td>5魂</td></tr>
-<tr><td>ヒプノック繁殖期</td><td>5魂</td></tr>
-<tr><td>ドドブランゴ</td><td>6魂</td></tr>
-<tr><td>グラビモス</td><td>6魂</td></tr>
-<tr><td>ガノトトス</td><td>6魂</td></tr>
-<tr><td>グラビモス亜種</td><td>7魂</td></tr>
-<tr><td>モノブロス</td><td>7魂</td></tr>
-<tr><td>ディアブロス</td><td>7魂</td></tr>
-<tr><td>リオレウス</td><td>7魂</td></tr>
-<tr><td>ディアブロス亜種</td><td>8魂</td></tr>
-</table>
-<table border=1 cellspacing=0 cellpadding=2 style="float:left">
-<tr class=l><th colspan=2>狩猟</th></tr>
-<tr><td>リオレウス亜種</td><td>8魂</td></tr>
-<tr><td>イャンガルルガ</td><td>8魂</td></tr>
-<tr><td>ティガレックス</td><td>8魂</td></tr>
-<tr><td>パリアプリア</td><td>8魂</td></tr>
-<tr><td>デュラガウア</td><td>8魂</td></tr>
-<tr><td>グレンゼブル</td><td>8魂</td></tr>
-<tr><td>ヴォルガノス</td><td>8魂</td></tr>
-<tr><td>カム・オルガロン</td><td>8魂</td></tr>
-<tr><td>ノノ・オルガロン</td><td>8魂</td></tr>
-<tr><td>ゴウガルフ</td><td>8魂</td></tr>
-<tr><td>ラージャン</td><td>9魂</td></tr>
-<tr><td>エスピナス</td><td>9魂</td></tr>
-<tr><td>リオレイア希少種</td><td>9魂</td></tr>
-<tr><td>クアルセプス</td><td>9魂</td></tr>
-<tr><td>エスピナス亜種</td><td>10魂</td></tr>
-<tr><td>リオレウス希少種</td><td>10魂</td></tr>
-<tr><td>エスピナス希少種</td><td>10魂</td></tr>
-<tr><td>ベルキュロス</td><td>11魂</td></tr>
-<tr><td>ドラギュロス</td><td>11魂</td></tr>
-<tr><td>バルラガル</td><td>11魂</td></tr>
-<tr><td>フォロクルル</td><td>11魂</td></tr>
-<tr><td>ファルノック</td><td>12魂</td></tr>
-<tr><td>ヒュジキキ</td><td>13魂</td></tr>
-<tr><td>ミドガロン</td><td>13魂</td></tr>
-<tr><td>ギアオルグ</td><td>13魂</td></tr>
-<tr><td>アノルパティス</td><td>14魂</td></tr>
-</table>
-<table border=1 cellspacing=0 cellpadding=2 style="float:left">
-<tr class=l><th colspan=2>討伐</th></tr>
-<tr><td>アビオルグ</td><td>8魂</td></tr>
-<tr><td>ゴルガノス</td><td>8魂</td></tr>
-<tr><td>アルガノス</td><td>8魂</td></tr>
-<tr><td>アクラ・ヴァシム</td><td>8魂</td></tr>
-<tr><td>アクラ・ジェビア</td><td>10魂</td></tr>
-<tr><td>アカムトルム</td><td>10魂</td></tr>
-<tr><td>オディバトラス</td><td>10魂</td></tr>
-<tr><td>ポボルバルム</td><td>10魂</td></tr>
-<tr><td>シェンガオレン</td><td>10魂</td></tr>
-<tr><td>ゼルレウス</td><td>11魂</td></tr>
-<tr><td>メラギナス</td><td>11魂</td></tr>
-<tr><td>ディオレックス</td><td>11魂</td></tr>
-<tr><td>キリン</td><td>12魂</td></tr>
-<tr><td>クシャルダオラ</td><td>15魂</td></tr>
-<tr><td>オオナズチ</td><td>15魂</td></tr>
-<tr><td>ナナ・テスカトリ</td><td>15魂</td></tr>
-<tr><td>テオ・テスカトル</td><td>15魂</td></tr>
-<tr><td>ルコディオラ</td><td>15魂</td></tr>
-<tr><td>イナガミ</td><td>20魂</td></tr>
-<tr><td>ガルバダオラ</td><td>20魂</td></tr>
-<tr><td>ヤマツカミ</td><td>20魂</td></tr>
-<tr><td>ラオシャンロン</td><td>20魂</td></tr>
-<tr><td>ラオシャンロン亜種</td><td>20魂</td></tr>
-<tr><td>ミラボレアス</td><td>20魂</td></tr>
-<tr><td>レビディオラ</td><td>25魂</td></tr>
-<tr><td>ミラバルカン</td><td>25魂</td></tr>
-<tr><td>ミラルーツ</td><td>25魂</td></tr>
-</table>
-<table border=1 cellspacing=0 cellpadding=2 style="float:left">
-<tr class=l><th colspan=2>捕獲</th></tr>
-<tr><td>ドスゲネポス</td><td>1魂</td></tr>
-<tr><td>ドスイーオス</td><td>1魂</td></tr>
-<tr><td>タイクンザムザ</td><td>5魂</td></tr>
-<tr><td>ガノトトス亜種</td><td>7魂</td></tr>
-<tr><td>モノブロス亜種</td><td>8魂</td></tr>
-<tr><td>ヴォルガノス亜種</td><td>9魂</td></tr>
-<tr><td>ヒプノック希少種</td><td>10魂</td></tr>
-<tr><td>ポカラドン</td><td>12魂</td></tr>
-<tr class=l><th colspan=2>納品</th></tr>
-<tr><td>飛竜の卵</td><td>1魂</td></tr>
-<tr><td>草食竜の卵</td><td>1魂</td></tr>
-<tr><td>肉食竜の卵</td><td>1魂</td></tr>
-<tr><td>火薬岩</td><td>1魂</td></tr>
-<tr><td>灰水晶の原石</td><td>1魂</td></tr>
-<tr><td>白水晶の原石</td><td>1魂</td></tr>
-</table>
-</div>
-<small style="font-size:70%;">今回のシクレは古龍のみで49か99魂です
-</small></div>
-<!--<tr class=l><th colspan=2>試練専有</th></tr>
-<tr><td colspan=2>金/土 12時～18時</td></tr>
-<tr><td colspan=2>日/月 18時～24時</td></tr>
-<tr><th colspan=2><a href="http://cog-members.mhf-g.jp/sp/news/9155.html">シクレ配信スケジュール</a></th></tr>
-ミラボレアス　ミラバルカン　ミラルーツ</td><td>15魂</td></tr>
--->
-<div style="clear: both;margin-top:1em;"><strong>・Update News</strong>
-<div style="width:650px;; height:8em; overflow:auto;font-size:80%;">
-<table border="1" cellspacing="0" cellpadding="2">
-<tr><td rowspan="4">2019/12/15</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>武器</td><td>未実装分も含め表示</td></tr>
-<tr>	<td>防具</td><td>未実装分も含め表示(シミュ上は表示されません)</td></tr>
-<tr>	<td>素材検索</td><td>未実装分も含め表示</td></tr>
-<tr><td rowspan="3">2019/11/30</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>武器</td><td>あかねこなっくる,あくねこなっくる,しろしろハウス,くろくろハウス他を追加</td></tr>
-<tr>	<td>防具</td><td>シャンディ,バンケット,エンドレ,タルタを追加</td></tr>
-<tr><td rowspan="1">2019/08/08</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr><td rowspan="1">2019/08/03</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr><td rowspan="1">2019/07/16</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr><td rowspan="2">2019/07/06</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>武器</td><td>歌祈武器を追加</td></tr>
-<tr><td rowspan="1">2019/06/29</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr><td rowspan="3">2019/06/19</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>武器</td><td>ポルト他を追加</td></tr>
-<tr>	<td>防具</td><td>アリシャ,ジェムズ,了奏,ミュンルを追加</td></tr>
-<tr><td rowspan="2">2019/05/14</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>防具</td><td>Ｇ級・手剛珠を追加</td></tr>
-<tr><td rowspan="3">2019/04/27</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>武器</td><td>ヴォルノボリん、カァーカァーグークを追加</td></tr>
-<tr>	<td>防具</td><td>ファンル、リッカを追加</td></tr>
-<tr><td rowspan="3">2019/04/20</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>武器</td><td>歌祈、祭武器を追加</td></tr>
-<tr>	<td>防具</td><td>フィールを追加</td></tr>
-<tr><td rowspan="2">2019/04/10</td><td>再々起</td><td>1/30アプデを反映</td></tr>
-<tr>	<td>スキルシミュ</td><td>武器の種類を選択可に変更<br>装飾品をスキル別/辿異スキル別に表示<br>秘伝カフに対応（ただし1番目に2スロのカフいれると選択できないので注意)</td></tr>
-<tr><td rowspan="2">2018/10/22</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>防具</td><td>アリシアを追加</td></tr>
-<tr><td rowspan="2">2018/10/15</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>防具</td><td>カフPZを追加</td></tr>
-<tr><td rowspan="3">2018/10/09</td><td>クエスト情報</td><td>新規分を追加</td></tr>
-<tr>	<td>防具</td><td>ファビラ,ボガバド,磁星,雅葉を追加</td></tr>
-<tr>	<td>モンス</td><td>征伐戦の表記変更</td></tr>
-</table>
-<a href="backno.html">過去の履歴</a>
-</div>
-<!--<br><strong>・イベント/特典の期限</strong>
-<div id=ive style="width:600px; height:6em; overflow:auto;font-size:80%;">
-<table border=1 cellspacing=0 cellpadding=2>
-<tr><td><a href="http://members.mh-frontier.jp/campaign/recopc/">PC購入2弾</a></td><td>ﾌｨﾃﾞｨ等</td><td>-</td><td>PC購入</td></tr>
-</table>
-</div>
--->
-<table border="0" cellspacing="2" cellpadding="0" style="margin-top:1em;font-size:80%;width:30em">
-<caption>・雑記</caption>
-<!--<tr><td>・ログイン<td>2013/01/10にCOGユーザのパスワードがリセットされています。→<a href="http://cog-members.mh-frontier.jp/information/news/info/6371.html">内容</a>　　復帰方法　<a href="http://www.capcom-onlinegames.jp/pc/forgot">メアドが有効な人</a>　<a href="http://www.capcom-onlinegames.jp/pc/ask?m=1">メアドが無効な人</a></td></tr>
-<tr><td>・統合<td>2013/09/18にサーバ１，２，３がサーバ１に統合されます。→<a href="http://cog-members.mh-frontier.jp/information/news/info/7217.html">詳細</a>　さらに2014/04/23にPS3とも統合→<a href="http://members.mhf-g.jp/contents/server_integration201404/">詳細</a></td></tr>
-<tr><td>・料金表</td><td>月額料金:1,400円(追加:600円) キャラ追加:1体1,000円 お得コース:3日980円 ガチャ:300円</td></tr>
-<tr><td>・１日の訪問者</td><td>2008年度 5月:1.2　6月:1.2　7月:1.5　8月:1.4　9月:1.9　10月:1.9　11月:1.89　12月:2.36　1月:2.28　2月:2.47　3月:2.24  (万人)</td></tr>
-<tr><td>・１日の訪問者</td><td>2009年度 4月:2.62 5月:2.93 6月:2.95 7月:2.92 8月:2.51 9月:2.81 10月:2.91 11月:2.60 12月:2.81 1月:3.04 2月:3.23 3月:3.19(万人)</td></tr>
-<tr><td>・１日の訪問者</td><td>2010年度 4月:3.50 5月:3.61 6月:3.53 7月:3.91 8月:4.10 9月:4.28 10月:4.51 11月:3.92 12月:2.78 1月:3.03 2月:3.55 3月:3.34(万人)</td></tr>
-<tr><td></td><td>2011年度 4月:3.85 5月:4.11 6月:3.86 7月:3.68 8月:3.92 9月:3.64 10月:4.00 11月:3.68 12月:3.39 1月:3.34 2月:3.83 3月:3.74(万人)</td></tr>
-<tr><td>・１日の訪問者</td><td>2012年度 4月:3.67 5月:3.68 6月:3.78 7月:3.30 8月:3.40 9月:3.45 10月:3.67 11月:3.71 12月:3.40 1月:3.33 2月:3.23 3月:2.94(万人)</td></tr>
-<tr><td></td><td>2013年度 4月:3.21 5月:2.96 6月:2.47 7月:2.44 8月:2.37 9月:2.03 10月:1.91 11月:1.91 12月:1.98 1月:1.84 2月:1.89 3月:1.69(万人)</td></tr>
-<tr><td></td><td>2014年度 4月:1.17 5月:2.12 6月:1.78 7月:1.72 8月:1.83 9月:1.77 10月:1.56 11月:1.54 12月:1.57 1月:1.53 2月:1.45 3月:1.33(万人)</td></tr>
-<tr><td></td><td>2015年度 4月:1.31 5月:1.32 6月:1.17 7月:1.12 8月:1.23 9月:1.08 10月:1.00 11月:1.00 12月:0.95 1月:0.93 2月:0.93 3月:0.97(万人)</td></tr>
-<tr><td></td><td>2016年度 4月:0.95 5月:0.90 6月:0.81 7月:0.72 8月:0.65 9月:0.66 10月:0.66 11月:0.93 12月:1.06 1月:0.89 2月:0.85 (万人)</td></tr>
-<tr><td>・１日の訪問者</td><td>2018年度 4月:1.42 5月:1.38 6月:1.13 7月:1.05 (千人)</td></tr>
--->
-<!--
-<tr><td>・OS</td><td>Windows7:31.6%　Windows10:31.2%　Android:10.0%　Windows XP:8.5%　iPhone:7.0%　Windows8.1:6.1%</td></tr>
-<tr><td>・解像度</td><td>1920x1080:38.9%　1366x768:10.1%　360x640:5.7%　1536x864:4.2%　375x667:4.1%　1280x1024:2.9%</td></tr>
-<tr><td>・言語</td><td>日本語:90.5%　中国語:7.9%　英語:1.1%　韓国語:0.2%　タイ語:0.1%</td></tr>
-<tr><td>・ブラウザ</td><td>Chrome:39.1%　IE:36.7%　Firefox:10.7%　Safari.0:9.1%　PlayStation:0.1%</td></tr>
-<tr><td></td><td>1月1週:1.55 2週: 3週: 4週: (万人)</td></tr>
-<tr><td></td><td>2月1週:2.07  (万人)</td></tr>
--->
-</table>
-<p style="font-size:75%;">おつかれさまでした
-<br>
-</p>
-<ul type="square" style="font-size:80%;line-height: 1.0;margin-top:2em;margin-left:1em;">
-<li>掲載内容は"暇人の解析情報"様(更新停止)、"モンスターハンター２解析情報"様<small>《<a href="http://mh2kaiseki.web.fc2.com/index.html" target="_blank">複製</a>》</small>、某掲示板の各種スレッド、他いろいろな情報を調合しています。
-<li>各ページのレイアウトは"モンスターハンター２解析情報"様を参考にしています。
-<li>当サイトを見ることで楽しみを失う場合があります。他の人に伝える際には注意してください。また、内容について運営に問い合わせることはご遠慮ください。
-<li>掲載内容が正しいとは保証できませんので、信じきることは危険です。指摘・情報等は、<a href="wforum/wforum.cgi.html">要望・不具合はこちらに</a>からお願いします。
-<li>モンスターハンターフロンティア / Monster Hunter Frontier は株式会社カプコンの商標です。<br>
-　　　(c) CAPCOM CO., LTD. 2007, 2019 ALL RIGHTS RESERVED
-</li></ul>
-<script type="text/javascript">
-<!--
-(function (){
-	/*@cc_on@*/
-	if (document.documentMode){
-		var t = document.getElementById("ie8");
-		/*@if (@_jscript_version >= 9)
-			if (document.documentMode < 9){
-				t.innerHTML += "<br><small>現在、IE" + document.documentMode + "モードで見ています。F12を押してドキュメントモードをIE9標準にしてください。スプリクトが正常に動作しません。<\/small>";
-			}
-		@elif (@_jscript_version < 9)
-			if (document.documentMode < 8){
-				t.innerHTML += "<br><small>現在、IE" + document.documentMode + "モードで見ています。一部機能が使用できません。<\/small>";
-			}
-		@end@*/
-	}
-})();
+		<div id="calendar" style="float:left;"></div>
+		<!--<div style="clear: both;"><strong>・狩人祭</strong>
+		<div style="font-size:80%;">
+		<table border=1 cellspacing=0 cellpadding=2 style="float:left">
+		<tr class=l><th colspan=2>狩猟</th></tr>
+		<tr><td>ドスランポス</td><td>1魂</td></tr>
+		<tr><td>ドスファンゴ</td><td>1魂</td></tr>
+		<tr><td>イャンクック</td><td>2魂</td></tr>
+		<tr><td>イャンクック亜種</td><td>2魂</td></tr>
+		<tr><td>ドスガレオス</td><td>3魂</td></tr>
+		<tr><td>ゲリョス</td><td>3魂</td></tr>
+		<tr><td>ゲリョス亜種</td><td>4魂</td></tr>
+		<tr><td>ダイミョウザザミ</td><td>4魂</td></tr>
+		<tr><td>ショウグンギザミ</td><td>4魂</td></tr>
+		<tr><td>バサルモス</td><td>5魂</td></tr>
+		<tr><td>ババコンガ</td><td>5魂</td></tr>
+		<tr><td>ゴゴモア</td><td>5魂</td></tr>
+		<tr><td>リオレイア</td><td>5魂</td></tr>
+		<tr><td>リオレイア亜種</td><td>5魂</td></tr>
+		<tr><td>フルフル</td><td>5魂</td></tr>
+		<tr><td>フルフル亜種</td><td>5魂</td></tr>
+		<tr><td>ヒプノック</td><td>5魂</td></tr>
+		<tr><td>ヒプノック繁殖期</td><td>5魂</td></tr>
+		<tr><td>ドドブランゴ</td><td>6魂</td></tr>
+		<tr><td>グラビモス</td><td>6魂</td></tr>
+		<tr><td>ガノトトス</td><td>6魂</td></tr>
+		<tr><td>グラビモス亜種</td><td>7魂</td></tr>
+		<tr><td>モノブロス</td><td>7魂</td></tr>
+		<tr><td>ディアブロス</td><td>7魂</td></tr>
+		<tr><td>リオレウス</td><td>7魂</td></tr>
+		<tr><td>ディアブロス亜種</td><td>8魂</td></tr>
+		</table>
+		<table border=1 cellspacing=0 cellpadding=2 style="float:left">
+		<tr class=l><th colspan=2>狩猟</th></tr>
+		<tr><td>リオレウス亜種</td><td>8魂</td></tr>
+		<tr><td>イャンガルルガ</td><td>8魂</td></tr>
+		<tr><td>ティガレックス</td><td>8魂</td></tr>
+		<tr><td>パリアプリア</td><td>8魂</td></tr>
+		<tr><td>デュラガウア</td><td>8魂</td></tr>
+		<tr><td>グレンゼブル</td><td>8魂</td></tr>
+		<tr><td>ヴォルガノス</td><td>8魂</td></tr>
+		<tr><td>カム・オルガロン</td><td>8魂</td></tr>
+		<tr><td>ノノ・オルガロン</td><td>8魂</td></tr>
+		<tr><td>ゴウガルフ</td><td>8魂</td></tr>
+		<tr><td>ラージャン</td><td>9魂</td></tr>
+		<tr><td>エスピナス</td><td>9魂</td></tr>
+		<tr><td>リオレイア希少種</td><td>9魂</td></tr>
+		<tr><td>クアルセプス</td><td>9魂</td></tr>
+		<tr><td>エスピナス亜種</td><td>10魂</td></tr>
+		<tr><td>リオレウス希少種</td><td>10魂</td></tr>
+		<tr><td>エスピナス希少種</td><td>10魂</td></tr>
+		<tr><td>ベルキュロス</td><td>11魂</td></tr>
+		<tr><td>ドラギュロス</td><td>11魂</td></tr>
+		<tr><td>バルラガル</td><td>11魂</td></tr>
+		<tr><td>フォロクルル</td><td>11魂</td></tr>
+		<tr><td>ファルノック</td><td>12魂</td></tr>
+		<tr><td>ヒュジキキ</td><td>13魂</td></tr>
+		<tr><td>ミドガロン</td><td>13魂</td></tr>
+		<tr><td>ギアオルグ</td><td>13魂</td></tr>
+		<tr><td>アノルパティス</td><td>14魂</td></tr>
+		</table>
+		<table border=1 cellspacing=0 cellpadding=2 style="float:left">
+		<tr class=l><th colspan=2>討伐</th></tr>
+		<tr><td>アビオルグ</td><td>8魂</td></tr>
+		<tr><td>ゴルガノス</td><td>8魂</td></tr>
+		<tr><td>アルガノス</td><td>8魂</td></tr>
+		<tr><td>アクラ・ヴァシム</td><td>8魂</td></tr>
+		<tr><td>アクラ・ジェビア</td><td>10魂</td></tr>
+		<tr><td>アカムトルム</td><td>10魂</td></tr>
+		<tr><td>オディバトラス</td><td>10魂</td></tr>
+		<tr><td>ポボルバルム</td><td>10魂</td></tr>
+		<tr><td>シェンガオレン</td><td>10魂</td></tr>
+		<tr><td>ゼルレウス</td><td>11魂</td></tr>
+		<tr><td>メラギナス</td><td>11魂</td></tr>
+		<tr><td>ディオレックス</td><td>11魂</td></tr>
+		<tr><td>キリン</td><td>12魂</td></tr>
+		<tr><td>クシャルダオラ</td><td>15魂</td></tr>
+		<tr><td>オオナズチ</td><td>15魂</td></tr>
+		<tr><td>ナナ・テスカトリ</td><td>15魂</td></tr>
+		<tr><td>テオ・テスカトル</td><td>15魂</td></tr>
+		<tr><td>ルコディオラ</td><td>15魂</td></tr>
+		<tr><td>イナガミ</td><td>20魂</td></tr>
+		<tr><td>ガルバダオラ</td><td>20魂</td></tr>
+		<tr><td>ヤマツカミ</td><td>20魂</td></tr>
+		<tr><td>ラオシャンロン</td><td>20魂</td></tr>
+		<tr><td>ラオシャンロン亜種</td><td>20魂</td></tr>
+		<tr><td>ミラボレアス</td><td>20魂</td></tr>
+		<tr><td>レビディオラ</td><td>25魂</td></tr>
+		<tr><td>ミラバルカン</td><td>25魂</td></tr>
+		<tr><td>ミラルーツ</td><td>25魂</td></tr>
+		</table>
+		<table border=1 cellspacing=0 cellpadding=2 style="float:left">
+		<tr class=l><th colspan=2>捕獲</th></tr>
+		<tr><td>ドスゲネポス</td><td>1魂</td></tr>
+		<tr><td>ドスイーオス</td><td>1魂</td></tr>
+		<tr><td>タイクンザムザ</td><td>5魂</td></tr>
+		<tr><td>ガノトトス亜種</td><td>7魂</td></tr>
+		<tr><td>モノブロス亜種</td><td>8魂</td></tr>
+		<tr><td>ヴォルガノス亜種</td><td>9魂</td></tr>
+		<tr><td>ヒプノック希少種</td><td>10魂</td></tr>
+		<tr><td>ポカラドン</td><td>12魂</td></tr>
+		<tr class=l><th colspan=2>納品</th></tr>
+		<tr><td>飛竜の卵</td><td>1魂</td></tr>
+		<tr><td>草食竜の卵</td><td>1魂</td></tr>
+		<tr><td>肉食竜の卵</td><td>1魂</td></tr>
+		<tr><td>火薬岩</td><td>1魂</td></tr>
+		<tr><td>灰水晶の原石</td><td>1魂</td></tr>
+		<tr><td>白水晶の原石</td><td>1魂</td></tr>
+		</table>
+		</div>
+		<small style="font-size:70%;">今回のシクレは古龍のみで49か99魂です
+		</small></div>
+		<!--<tr class=l><th colspan=2>試練専有</th></tr>
+		<tr><td colspan=2>金/土 12時～18時</td></tr>
+		<tr><td colspan=2>日/月 18時～24時</td></tr>
+		<tr><th colspan=2><a href="http://cog-members.mhf-g.jp/sp/news/9155.html">シクレ配信スケジュール</a></th></tr>
+		ミラボレアス　ミラバルカン　ミラルーツ</td><td>15魂</td></tr>
+		-->
+		<div style="clear: both;margin-top:1em;"><strong>・Update News</strong>
+			<div style="width:650px;; height:8em; overflow:auto;font-size:80%;">
+				<table border="1" cellspacing="0" cellpadding="2">
+				<tr><td rowspan="4">2019/12/15</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>武器</td><td>未実装分も含め表示</td></tr>
+				<tr>	<td>防具</td><td>未実装分も含め表示(シミュ上は表示されません)</td></tr>
+				<tr>	<td>素材検索</td><td>未実装分も含め表示</td></tr>
+				<tr><td rowspan="3">2019/11/30</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>武器</td><td>あかねこなっくる,あくねこなっくる,しろしろハウス,くろくろハウス他を追加</td></tr>
+				<tr>	<td>防具</td><td>シャンディ,バンケット,エンドレ,タルタを追加</td></tr>
+				<tr><td rowspan="1">2019/08/08</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr><td rowspan="1">2019/08/03</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr><td rowspan="1">2019/07/16</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr><td rowspan="2">2019/07/06</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>武器</td><td>歌祈武器を追加</td></tr>
+				<tr><td rowspan="1">2019/06/29</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr><td rowspan="3">2019/06/19</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>武器</td><td>ポルト他を追加</td></tr>
+				<tr>	<td>防具</td><td>アリシャ,ジェムズ,了奏,ミュンルを追加</td></tr>
+				<tr><td rowspan="2">2019/05/14</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>防具</td><td>Ｇ級・手剛珠を追加</td></tr>
+				<tr><td rowspan="3">2019/04/27</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>武器</td><td>ヴォルノボリん、カァーカァーグークを追加</td></tr>
+				<tr>	<td>防具</td><td>ファンル、リッカを追加</td></tr>
+				<tr><td rowspan="3">2019/04/20</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>武器</td><td>歌祈、祭武器を追加</td></tr>
+				<tr>	<td>防具</td><td>フィールを追加</td></tr>
+				<tr><td rowspan="2">2019/04/10</td><td>再々起</td><td>1/30アプデを反映</td></tr>
+				<tr>	<td>スキルシミュ</td><td>武器の種類を選択可に変更<br>装飾品をスキル別/辿異スキル別に表示<br>秘伝カフに対応（ただし1番目に2スロのカフいれると選択できないので注意)</td></tr>
+				<tr><td rowspan="2">2018/10/22</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>防具</td><td>アリシアを追加</td></tr>
+				<tr><td rowspan="2">2018/10/15</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>防具</td><td>カフPZを追加</td></tr>
+				<tr><td rowspan="3">2018/10/09</td><td>クエスト情報</td><td>新規分を追加</td></tr>
+				<tr>	<td>防具</td><td>ファビラ,ボガバド,磁星,雅葉を追加</td></tr>
+				<tr>	<td>モンス</td><td>征伐戦の表記変更</td></tr>
+				</table>
+				<a href="backno.html">過去の履歴</a>
+			</div>
+			<!--<br><strong>・イベント/特典の期限</strong>
+			<div id=ive style="width:600px; height:6em; overflow:auto;font-size:80%;">
+			<table border=1 cellspacing=0 cellpadding=2>
+			<tr><td><a href="http://members.mh-frontier.jp/campaign/recopc/">PC購入2弾</a></td><td>ﾌｨﾃﾞｨ等</td><td>-</td><td>PC購入</td></tr>
+			</table>
+			</div>
+			-->
+			<table border="0" cellspacing="2" cellpadding="0" style="margin-top:1em;font-size:80%;width:30em">
+			<caption>・雑記</caption>
+			<!--<tr><td>・ログイン<td>2013/01/10にCOGユーザのパスワードがリセットされています。→<a href="http://cog-members.mh-frontier.jp/information/news/info/6371.html">内容</a>　　復帰方法　<a href="http://www.capcom-onlinegames.jp/pc/forgot">メアドが有効な人</a>　<a href="http://www.capcom-onlinegames.jp/pc/ask?m=1">メアドが無効な人</a></td></tr>
+			<tr><td>・統合<td>2013/09/18にサーバ１，２，３がサーバ１に統合されます。→<a href="http://cog-members.mh-frontier.jp/information/news/info/7217.html">詳細</a>　さらに2014/04/23にPS3とも統合→<a href="http://members.mhf-g.jp/contents/server_integration201404/">詳細</a></td></tr>
+			<tr><td>・料金表</td><td>月額料金:1,400円(追加:600円) キャラ追加:1体1,000円 お得コース:3日980円 ガチャ:300円</td></tr>
+			<tr><td>・１日の訪問者</td><td>2008年度 5月:1.2　6月:1.2　7月:1.5　8月:1.4　9月:1.9　10月:1.9　11月:1.89　12月:2.36　1月:2.28　2月:2.47　3月:2.24  (万人)</td></tr>
+			<tr><td>・１日の訪問者</td><td>2009年度 4月:2.62 5月:2.93 6月:2.95 7月:2.92 8月:2.51 9月:2.81 10月:2.91 11月:2.60 12月:2.81 1月:3.04 2月:3.23 3月:3.19(万人)</td></tr>
+			<tr><td>・１日の訪問者</td><td>2010年度 4月:3.50 5月:3.61 6月:3.53 7月:3.91 8月:4.10 9月:4.28 10月:4.51 11月:3.92 12月:2.78 1月:3.03 2月:3.55 3月:3.34(万人)</td></tr>
+			<tr><td></td><td>2011年度 4月:3.85 5月:4.11 6月:3.86 7月:3.68 8月:3.92 9月:3.64 10月:4.00 11月:3.68 12月:3.39 1月:3.34 2月:3.83 3月:3.74(万人)</td></tr>
+			<tr><td>・１日の訪問者</td><td>2012年度 4月:3.67 5月:3.68 6月:3.78 7月:3.30 8月:3.40 9月:3.45 10月:3.67 11月:3.71 12月:3.40 1月:3.33 2月:3.23 3月:2.94(万人)</td></tr>
+			<tr><td></td><td>2013年度 4月:3.21 5月:2.96 6月:2.47 7月:2.44 8月:2.37 9月:2.03 10月:1.91 11月:1.91 12月:1.98 1月:1.84 2月:1.89 3月:1.69(万人)</td></tr>
+			<tr><td></td><td>2014年度 4月:1.17 5月:2.12 6月:1.78 7月:1.72 8月:1.83 9月:1.77 10月:1.56 11月:1.54 12月:1.57 1月:1.53 2月:1.45 3月:1.33(万人)</td></tr>
+			<tr><td></td><td>2015年度 4月:1.31 5月:1.32 6月:1.17 7月:1.12 8月:1.23 9月:1.08 10月:1.00 11月:1.00 12月:0.95 1月:0.93 2月:0.93 3月:0.97(万人)</td></tr>
+			<tr><td></td><td>2016年度 4月:0.95 5月:0.90 6月:0.81 7月:0.72 8月:0.65 9月:0.66 10月:0.66 11月:0.93 12月:1.06 1月:0.89 2月:0.85 (万人)</td></tr>
+			<tr><td>・１日の訪問者</td><td>2018年度 4月:1.42 5月:1.38 6月:1.13 7月:1.05 (千人)</td></tr>
+			-->
+			<!--
+			<tr><td>・OS</td><td>Windows7:31.6%　Windows10:31.2%　Android:10.0%　Windows XP:8.5%　iPhone:7.0%　Windows8.1:6.1%</td></tr>
+			<tr><td>・解像度</td><td>1920x1080:38.9%　1366x768:10.1%　360x640:5.7%　1536x864:4.2%　375x667:4.1%　1280x1024:2.9%</td></tr>
+			<tr><td>・言語</td><td>日本語:90.5%　中国語:7.9%　英語:1.1%　韓国語:0.2%　タイ語:0.1%</td></tr>
+			<tr><td>・ブラウザ</td><td>Chrome:39.1%　IE:36.7%　Firefox:10.7%　Safari.0:9.1%　PlayStation:0.1%</td></tr>
+			<tr><td></td><td>1月1週:1.55 2週: 3週: 4週: (万人)</td></tr>
+			<tr><td></td><td>2月1週:2.07  (万人)</td></tr>
+			-->
+			</table>
+			<p style="font-size:75%;">おつかれさまでした
+			<br>
+			</p>
+			<ul type="square" style="font-size:80%;line-height: 1.0;margin-top:2em;margin-left:1em;">
+			<li>掲載内容は"暇人の解析情報"様(更新停止)、"モンスターハンター２解析情報"様<small>《<a href="http://mh2kaiseki.web.fc2.com/index.html" target="_blank">複製</a>》</small>、某掲示板の各種スレッド、他いろいろな情報を調合しています。
+			<li>各ページのレイアウトは"モンスターハンター２解析情報"様を参考にしています。
+			<li>当サイトを見ることで楽しみを失う場合があります。他の人に伝える際には注意してください。また、内容について運営に問い合わせることはご遠慮ください。
+			<li>掲載内容が正しいとは保証できませんので、信じきることは危険です。指摘・情報等は、<a href="wforum/wforum.cgi.html">要望・不具合はこちらに</a>からお願いします。
+			<li>モンスターハンターフロンティア / Monster Hunter Frontier は株式会社カプコンの商標です。<br>
+			　　　(c) CAPCOM CO., LTD. 2007, 2019 ALL RIGHTS RESERVED
+			</li></ul>
+			<script type="text/javascript">
+				<!--
+				(function (){
+					/*@cc_on@*/
+					if (document.documentMode){
+						var t = document.getElementById("ie8");
+						/*@if (@_jscript_version >= 9)
+							if (document.documentMode < 9){
+								t.innerHTML += "<br><small>現在、IE" + document.documentMode + "モードで見ています。F12を押してドキュメントモードをIE9標準にしてください。スプリクトが正常に動作しません。<\/small>";
+							}
+						@elif (@_jscript_version < 9)
+							if (document.documentMode < 8){
+								t.innerHTML += "<br><small>現在、IE" + document.documentMode + "モードで見ています。一部機能が使用できません。<\/small>";
+							}
+						@end@*/
+					}
+				})();
 
-var ck = 0,book = 0,nowhi = new Date();
-for (var i = 0,cookies = document.cookie.split("; "); i < cookies.length; i++) {
-	var str = cookies[i].split("=");
-	if (str[0] === "ck") {
-		ck = decodeURI(str[1]);
-//	} else if (str[0] === "book") {
-//		book = decodeURI(str[1]);
-	}
-}
-//カレンダー
-(function (){
-var youbi = ["日","月","火","水","木","金","土"],
-	kouro = ["属性バンザイ！","ミラトリオ","大集合！","リオリオコース","ＭＨＦ！×２","名所めぐり","ＢＩＧ４！","リオリオコース","ＭＨＦ！×２","大集合！","ＢＩＧ４！","ミラトリオ","属性バンザイ！","名所めぐり","大集合！","ミラトリオ","属性バンザイ！","ＢＩＧ４！","ＭＨＦ！×２","名所めぐり","リオリオコース","真赤"],
-	soul1 = ["ババコンガ","ヒプノック","リオレウス亜種","ヴォルガノス","オオナズチ","ディアブロス亜種","キリン","フルフル亜種","ゲリョス","ドドブランゴ","ショウグンギザミ","リオレイア亜種","デュラガウア","イャンクック亜種","バサルモス"],
-	soul2 = ["テオ・テスカトル","ヒプノック繁殖期","フルフル亜種","ドラギュロス","ラージャン","リオレイア亜種","イャンクック亜種","エスピナス亜種","カム・オルガロン","グラビモス","クシャルダオラ","ティガレックス","ディアブロス亜種","アカムトルム","ノノ・オルガロン","エスピナス"],
-	soul3 = ["アカムトルム","ティガレックス","バサルモス","ラージャン","ヒプノック","フルフル","ババコンガ","イャンクック","ヴォルガノス","グラビモス","ショウグンギザミ","ディアブロス","エスピナス"],
-	soul4 = ["デュラガウア","テオ・テスカトル","ドラギュロス","錆クシャルダオラ","オルガロン","キリン","グレンゼブル","クシャルダオラ"],
-	soulG1 = ["イャンクック","ゲリョス","ダイミョウザザミ","ドスガレオス","ババコンガ"],
-	soulG2 = ["ガノトトス","バサルモス","フルフル","ショウグンギザミ"],
-	soulG3 = ["リオレイア希少種","エスピナス","ゴウガルフ","デュラガウア","ラージャン","グレンゼブル","ヴォルガノス","ティガレックス","バルラガル","グラビモス亜種","ベルキュロス"];
+				var ck = 0,book = 0,nowhi = new Date();
+				for (var i = 0,cookies = document.cookie.split("; "); i < cookies.length; i++) {
+					var str = cookies[i].split("=");
+					if (str[0] === "ck") {
+						ck = decodeURI(str[1]);
+				//	} else if (str[0] === "book") {
+				//		book = decodeURI(str[1]);
+					}
+				}
+				//カレンダー
+				(function (){
+				var youbi = ["日","月","火","水","木","金","土"],
+					kouro = ["属性バンザイ！","ミラトリオ","大集合！","リオリオコース","ＭＨＦ！×２","名所めぐり","ＢＩＧ４！","リオリオコース","ＭＨＦ！×２","大集合！","ＢＩＧ４！","ミラトリオ","属性バンザイ！","名所めぐり","大集合！","ミラトリオ","属性バンザイ！","ＢＩＧ４！","ＭＨＦ！×２","名所めぐり","リオリオコース","真赤"],
+					soul1 = ["ババコンガ","ヒプノック","リオレウス亜種","ヴォルガノス","オオナズチ","ディアブロス亜種","キリン","フルフル亜種","ゲリョス","ドドブランゴ","ショウグンギザミ","リオレイア亜種","デュラガウア","イャンクック亜種","バサルモス"],
+					soul2 = ["テオ・テスカトル","ヒプノック繁殖期","フルフル亜種","ドラギュロス","ラージャン","リオレイア亜種","イャンクック亜種","エスピナス亜種","カム・オルガロン","グラビモス","クシャルダオラ","ティガレックス","ディアブロス亜種","アカムトルム","ノノ・オルガロン","エスピナス"],
+					soul3 = ["アカムトルム","ティガレックス","バサルモス","ラージャン","ヒプノック","フルフル","ババコンガ","イャンクック","ヴォルガノス","グラビモス","ショウグンギザミ","ディアブロス","エスピナス"],
+					soul4 = ["デュラガウア","テオ・テスカトル","ドラギュロス","錆クシャルダオラ","オルガロン","キリン","グレンゼブル","クシャルダオラ"],
+					soulG1 = ["イャンクック","ゲリョス","ダイミョウザザミ","ドスガレオス","ババコンガ"],
+					soulG2 = ["ガノトトス","バサルモス","フルフル","ショウグンギザミ"],
+					soulG3 = ["リオレイア希少種","エスピナス","ゴウガルフ","デュラガウア","ラージャン","グレンゼブル","ヴォルガノス","ティガレックス","バルラガル","グラビモス亜種","ベルキュロス"];
 
-var hi = new Date();
-hi.setDate(hi.getDate() + (hi.getHours() >= 0 && hi.getHours() < 12 ? -1:0));
-hiduke = parseInt((hi.getTime() + 9 * 3600 * 1000) / 24 / 3600 / 1000);
-var weekT = "", kouroT = "", festaT = "", setuT = "",yuuT = "",ck="";
-for (var i=0; i<21; i++) {
-	var n = youbi[hi.getDay()];
-	//日付
-	weekT += "<td class=l style='text-align:right;width:1.2em' colspan=2>" + hi.getDate() + "<div style='font-size:60%;";
-	//曜日
-	switch ((hi.getMonth()+1) + "/" + hi.getDate()) {
-	case "1/10": //成人の日　　　変動
-	case "2/11": //建国記念の日
-	case "3/21": //春分の日　　　変動
-	case "4/29": //昭和の日
-	case "5/3": //憲法記念日
-	case "5/4": //みどりの日
-	case "5/5": //こどもの日
-	case "7/15": //海の日　　　変動
-	case "9/16": //敬老の日　　　変動
-//	case "9/22": //国民の休日
-	case "9/23": //秋分の日
-	case "10/14": //体育の日　　　変動
-	case "11/3": //文化の日
-	case "11/23": //勤労感謝の日
-	case "12/23": //天皇誕生の日
-		weekT += "color:red'>" + n + "<\/div><\/td>";
-		yuuT += "<tr><td style='color:red'>" + hi.getDate();
-		break;
-	default:
-		if (n === "土") {
-			weekT += "color:blue'>" + n + "<\/div><\/td>";
-			yuuT += "<tr><td style='color:blue'>" + hi.getDate();
-		} else if (n === "日") {
-			weekT += "color:red'>" + n + "<\/div><\/td>";
-			yuuT += "<tr><td style='color:red'>" + hi.getDate();
-		} else {
-			weekT += "'>" + n + "<\/div><\/td>";
-			yuuT += "<tr><td>" + hi.getDate();
-		}
-		break;
-	}
-	//フェスタ
-	switch ((hiduke + i) % 8) {
-	case 0:
-		festaT += "<td title='調合屋の商品が豊富に' colspan=2>調<\/td>";
-		break;
-	case 2:
-		festaT += "<td title='商品・調合が半額' colspan=2>祭<\/td>";
-		break;
-	case 4:
-		festaT += "<td title='食材屋の商品が豊富に' colspan=2>食<\/td>";
-		break;
-	case 6:
-		festaT += "<td title='食材屋の商品が豊富に' colspan=2>食<\/td>";
-		break;
-	default:
-		festaT += "<td colspan=2><br><\/td>";
-		break;
-	}
-	//元節
-	switch ((hiduke + i-2) % 9) {
-//	case 0:
-//		//setuT += "<td colspan=2 style='color:Orange;background-color:silver' title='大推挙節(知名度1.5倍)'>推<\/td>";
-//		setuT += "<td colspan=2 title='大推挙節(知名度1.5倍)'>推<\/td>";
-//		break;
-	case 0:
-		//setuT += "<td colspan=2 style='color:Fuchsia;background-color:silver' title='大報酬節(ｸｴｽﾄ報酬で素材GET)'>報<\/td>";
-		setuT += "<td colspan=2 title='大報酬節(ｸｴｽﾄ報酬で素材GET)'>報<\/td>";
-		break;
-	case 3:
-		//setuT += "<td colspan=2 style='color:Lime;background-color:silver' title='大還元節(ﾐｯｼｮﾝでｱｲﾃﾑGET)'>還<\/td>";
-		setuT += "<td colspan=2 title='大還元節(ﾐｯｼｮﾝでｱｲﾃﾑGET)'>還<\/td>";
-		break;
-	case 6:
-		//setuT += "<td colspan=2 style='color:Aqua;background-color:silver' title='大錬珠節(ﾊﾟｰﾃｨﾎﾟｲﾝﾄ1.5倍)'>錬<\/td>";
-		setuT += "<td colspan=2 title='大錬珠節(ﾊﾟｰﾃｨﾎﾟｲﾝﾄ1.5倍)'>錬<\/td>";
-		break;
-	default:
-		setuT += "<td colspan=2><br><\/td>";
-		break;
-	}
-	//航路
-	kouroT += "<td style='border-top-style:dashed;' colspan=2 title='"+kouro[((hiduke + i + 7) % 22)]+"'><small>"+kouro[((hiduke + i + 7) % 22)].charAt(0)+"<\/small><\/td>";
-	//優先依頼
-	yuuT += " 12時" +
-			"<td class=sen2>" + soul1[(hiduke+i+7) % soul1.length] +
-			"<td class=sen1>" + soul2[(hiduke+i+2) % soul2.length] +
-			"<td class=sen1>" + soul3[(hiduke+i+4) % soul3.length] +
-			"<td class=sen1>" + soul4[(hiduke+i+1) % soul4.length] +
-			"<td class=sen2>" + soulG1[(hiduke+i+3) % soulG1.length] +
-			"<td class=sen1>" + soulG2[(hiduke+i) % soulG2.length] +
-			"<td class=sen1>" + soulG3[(hiduke+i+2) % soulG3.length];
+				var hi = new Date();
+				hi.setDate(hi.getDate() + (hi.getHours() >= 0 && hi.getHours() < 12 ? -1:0));
+				hiduke = parseInt((hi.getTime() + 9 * 3600 * 1000) / 24 / 3600 / 1000);
+				var weekT = "", kouroT = "", festaT = "", setuT = "",yuuT = "",ck="";
+				for (var i=0; i<21; i++) {
+					var n = youbi[hi.getDay()];
+					//日付
+					weekT += "<td class=l style='text-align:right;width:1.2em' colspan=2>" + hi.getDate() + "<div style='font-size:60%;";
+					//曜日
+					switch ((hi.getMonth()+1) + "/" + hi.getDate()) {
+					case "1/10": //成人の日　　　変動
+					case "2/11": //建国記念の日
+					case "3/21": //春分の日　　　変動
+					case "4/29": //昭和の日
+					case "5/3": //憲法記念日
+					case "5/4": //みどりの日
+					case "5/5": //こどもの日
+					case "7/15": //海の日　　　変動
+					case "9/16": //敬老の日　　　変動
+				//	case "9/22": //国民の休日
+					case "9/23": //秋分の日
+					case "10/14": //体育の日　　　変動
+					case "11/3": //文化の日
+					case "11/23": //勤労感謝の日
+					case "12/23": //天皇誕生の日
+						weekT += "color:#f38ba8'>" + n + "<\/div><\/td>";
+						yuuT += "<tr><td style='color:#f38ba8'>" + hi.getDate();
+						break;
+					default:
+						if (n === "土") {
+							weekT += "color:#89b4fa'>" + n + "<\/div><\/td>";
+							yuuT += "<tr><td style='color:#89b4fa'>" + hi.getDate();
+						} else if (n === "日") {
+							weekT += "color:#f38ba8'>" + n + "<\/div><\/td>";
+							yuuT += "<tr><td style='color:#f38ba8'>" + hi.getDate();
+						} else {
+							weekT += "'>" + n + "<\/div><\/td>";
+							yuuT += "<tr><td>" + hi.getDate();
+						}
+						break;
+					}
+					//フェスタ
+					switch ((hiduke + i) % 8) {
+					case 0:
+						festaT += "<td title='調合屋の商品が豊富に' colspan=2>調<\/td>";
+						break;
+					case 2:
+						festaT += "<td title='商品・調合が半額' colspan=2>祭<\/td>";
+						break;
+					case 4:
+						festaT += "<td title='食材屋の商品が豊富に' colspan=2>食<\/td>";
+						break;
+					case 6:
+						festaT += "<td title='食材屋の商品が豊富に' colspan=2>食<\/td>";
+						break;
+					default:
+						festaT += "<td colspan=2><br><\/td>";
+						break;
+					}
+					//元節
+					switch ((hiduke + i-2) % 9) {
+				//	case 0:
+				//		//setuT += "<td colspan=2 style='color:Orange;background-color:#6c7086' title='大推挙節(知名度1.5倍)'>推<\/td>";
+				//		setuT += "<td colspan=2 title='大推挙節(知名度1.5倍)'>推<\/td>";
+				//		break;
+					case 0:
+						//setuT += "<td colspan=2 style='color:Fuchsia;background-color:#6c7086' title='大報酬節(ｸｴｽﾄ報酬で素材GET)'>報<\/td>";
+						setuT += "<td colspan=2 title='大報酬節(ｸｴｽﾄ報酬で素材GET)'>報<\/td>";
+						break;
+					case 3:
+						//setuT += "<td colspan=2 style='color:Lime;background-color:#6c7086' title='大還元節(ﾐｯｼｮﾝでｱｲﾃﾑGET)'>還<\/td>";
+						setuT += "<td colspan=2 title='大還元節(ﾐｯｼｮﾝでｱｲﾃﾑGET)'>還<\/td>";
+						break;
+					case 6:
+						//setuT += "<td colspan=2 style='color:Aqua;background-color:#6c7086' title='大錬珠節(ﾊﾟｰﾃｨﾎﾟｲﾝﾄ1.5倍)'>錬<\/td>";
+						setuT += "<td colspan=2 title='大錬珠節(ﾊﾟｰﾃｨﾎﾟｲﾝﾄ1.5倍)'>錬<\/td>";
+						break;
+					default:
+						setuT += "<td colspan=2><br><\/td>";
+						break;
+					}
+					//航路
+					kouroT += "<td style='border-top-style:dashed;' colspan=2 title='"+kouro[((hiduke + i + 7) % 22)]+"'><small>"+kouro[((hiduke + i + 7) % 22)].charAt(0)+"<\/small><\/td>";
+					//優先依頼
+					yuuT += " 12時" +
+							"<td class=sen2>" + soul1[(hiduke+i+7) % soul1.length] +
+							"<td class=sen1>" + soul2[(hiduke+i+2) % soul2.length] +
+							"<td class=sen1>" + soul3[(hiduke+i+4) % soul3.length] +
+							"<td class=sen1>" + soul4[(hiduke+i+1) % soul4.length] +
+							"<td class=sen2>" + soulG1[(hiduke+i+3) % soulG1.length] +
+							"<td class=sen1>" + soulG2[(hiduke+i) % soulG2.length] +
+							"<td class=sen1>" + soulG3[(hiduke+i+2) % soulG3.length];
 
-	hi.setDate(hi.getDate() + 1);
-}
-var t = document.getElementById("calendar");
-t.innerHTML = "<table border=1 class=cal cellspacing=0 cellpadding=2 style='table-layout:fixed;'>" +
-			"<caption>・カレンダー<\/caption>" +
-			"<tr><td width=2em><\/td>" + weekT + "<\/tr><tr><td width=2em><\/td>" + festaT + "<\/tr><tr>" + setuT +"<\/tr><tr>" + kouroT+"<\/tr>" +
-			"<\/table>" +
-			"<!--<table border=1 cellspacing=0 style='height:3.5em;width:60em;table-layout:fixed;font-size:80%;'>" +
-			"<tr><th class=l style='width:3em;'>秘伝優先<\/th><td><div style='height:3.5em;overflow:auto;'>" + 
-				"<table border=0 cellspacing=0 cellpadding=0>" + 
-				"<tr><th><th class=sen2>魂・序<th class=sen1>魂・中<th class=sen1>魂・極<th class=sen1>魂・天<th class=sen2>綬・序<th class=sen1>綬・中<th class=sen1>綬・極" + 
-				yuuT + "<\/table>-->" +
-			"<\/div><\/td><\/tr>" +
-			"<\/table>";
-})();
-function showCountdown() {
-   // 現在日時を数値(1970-01-01 00:00:00からのミリ秒)に変換
-   var nowDate = new Date();
-   var dnumNow = nowDate.getTime();
- 
-   // 指定日時を数値(1970-01-01 00:00:00からのミリ秒)に変換
-   var inputYear  = 2019;
-   var inputMonth = 12 - 1;
-   var inputDate  = 18;
-   var inputHour  = 21;
-   var inputMin   = 00;
-   var inputSec   = 00;
-   var targetDate = new Date( inputYear, inputMonth, inputDate, inputHour, inputMin, inputSec );
-   var dnumTarget = targetDate.getTime();
- 
-   // 表示を準備
-   var dlYear  = targetDate.getFullYear();
-   var dlMonth = targetDate.getMonth() + 1;
-   var dlDate  = targetDate.getDate();
-   var dlHour  = targetDate.getHours();
-   var dlMin   = targetDate.getMinutes();
-   var dlSec   = targetDate.getSeconds();
-   var msg1 = "End of service: 12/18/2019 at <b>21:00</b>";
- 
-   // 引き算して日数(ミリ秒)の差を計算
-   var diff2Dates = dnumTarget - dnumNow;
-   if( dnumTarget < dnumNow ) {
-      // 期限が過ぎた場合は -1 を掛けて正の値に変換
-      diff2Dates *= -1;
-   }
- 
-   // 差のミリ秒を、日数・時間・分・秒に分割
-   var dDays  = diff2Dates / ( 1000 * 60 * 60 * 24 );   // 日数
-   diff2Dates = diff2Dates % ( 1000 * 60 * 60 * 24 );
-   var dHour  = diff2Dates / ( 1000 * 60 * 60 );   // 時間
-   diff2Dates = diff2Dates % ( 1000 * 60 * 60 );
-   var dMin   = diff2Dates / ( 1000 * 60 );   // 分
-   diff2Dates = diff2Dates % ( 1000 * 60 );
-   var dSec   = diff2Dates / 1000;   // 秒
-   var msg2 = Math.floor(dDays) + " Days, "
-            + Math.floor(dHour) + " Hours, "
-            + Math.floor(dMin) + " Minutes, and "
-            + Math.floor(dSec) + " Seconds ";
- 
-   // 表示文字列の作成
-   var msg;
-   if( dnumTarget > dnumNow ) {
-      // まだ期限が来ていない場合
-      msg = msg1 + "まで、あと" + msg2 + "です。。";
-   }
-   else {
-      // 期限が過ぎた場合
-      msg = msg1 + " since then, already " + msg2 + " have passed.";
-   }
- 
-   // 作成した文字列を表示
-   document.getElementById("RealtimeCountdownArea").innerHTML = msg;
-}
-(function (){
-showCountdown();
-// 1秒ごとに実行
-setInterval("showCountdown()",1000);
-})();
-// -->
-</script>
-</div></body>
+					hi.setDate(hi.getDate() + 1);
+				}
+				var t = document.getElementById("calendar");
+				t.innerHTML = "<table border=1 class=cal cellspacing=0 cellpadding=2 style='table-layout:fixed;'>" +
+							"<caption>・カレンダー<\/caption>" +
+							"<tr><td width=2em><\/td>" + weekT + "<\/tr><tr><td width=2em><\/td>" + festaT + "<\/tr><tr>" + setuT +"<\/tr><tr>" + kouroT+"<\/tr>" +
+							"<\/table>" +
+							"<!--<table border=1 cellspacing=0 style='height:3.5em;width:60em;table-layout:fixed;font-size:80%;'>" +
+							"<tr><th class=l style='width:3em;'>秘伝優先<\/th><td><div style='height:3.5em;overflow:auto;'>" + 
+								"<table border=0 cellspacing=0 cellpadding=0>" + 
+								"<tr><th><th class=sen2>魂・序<th class=sen1>魂・中<th class=sen1>魂・極<th class=sen1>魂・天<th class=sen2>綬・序<th class=sen1>綬・中<th class=sen1>綬・極" + 
+								yuuT + "<\/table>-->" +
+							"<\/div><\/td><\/tr>" +
+							"<\/table>";
+				})();
+				function showCountdown() {
+					// 現在日時を数値(1970-01-01 00:00:00からのミリ秒)に変換
+					var nowDate = new Date();
+					var dnumNow = nowDate.getTime();
+				
+					// 指定日時を数値(1970-01-01 00:00:00からのミリ秒)に変換
+					var inputYear  = 2019;
+					var inputMonth = 12 - 1;
+					var inputDate  = 18;
+					var inputHour  = 21;
+					var inputMin   = 00;
+					var inputSec   = 00;
+					var targetDate = new Date( inputYear, inputMonth, inputDate, inputHour, inputMin, inputSec );
+					var dnumTarget = targetDate.getTime();
+				
+					// 表示を準備
+					var dlYear  = targetDate.getFullYear();
+					var dlMonth = targetDate.getMonth() + 1;
+					var dlDate  = targetDate.getDate();
+					var dlHour  = targetDate.getHours();
+					var dlMin   = targetDate.getMinutes();
+					var dlSec   = targetDate.getSeconds();
+					var msg1 = "End of service: 12/18/2019 at <b>21:00</b>";
+				
+					// 引き算して日数(ミリ秒)の差を計算
+					var diff2Dates = dnumTarget - dnumNow;
+					if( dnumTarget < dnumNow ) {
+							// 期限が過ぎた場合は -1 を掛けて正の値に変換
+							diff2Dates *= -1;
+					}
+				
+					// 差のミリ秒を、日数・時間・分・秒に分割
+					var dDays  = diff2Dates / ( 1000 * 60 * 60 * 24 );   // 日数
+					diff2Dates = diff2Dates % ( 1000 * 60 * 60 * 24 );
+					var dHour  = diff2Dates / ( 1000 * 60 * 60 );   // 時間
+					diff2Dates = diff2Dates % ( 1000 * 60 * 60 );
+					var dMin   = diff2Dates / ( 1000 * 60 );   // 分
+					diff2Dates = diff2Dates % ( 1000 * 60 );
+					var dSec   = diff2Dates / 1000;   // 秒
+					var msg2 = Math.floor(dDays) + " Days, "
+										+ Math.floor(dHour) + " Hours, "
+										+ Math.floor(dMin) + " Minutes, and "
+										+ Math.floor(dSec) + " Seconds ";
+				
+					// 表示文字列の作成
+					var msg;
+					if( dnumTarget > dnumNow ) {
+							// まだ期限が来ていない場合
+							msg = msg1 + "まで、あと" + msg2 + "です。。";
+					}
+					else {
+							// 期限が過ぎた場合
+							msg = msg1 + " since then, already " + msg2 + " have passed.";
+					}
+				
+					// 作成した文字列を表示
+					document.getElementById("RealtimeCountdownArea").innerHTML = msg;
+				}
+				(function (){
+				showCountdown();
+				// 1秒ごとに実行
+				setInterval("showCountdown()",1000);
+				})();
+				// -->
+			</script>
+			</div>
+		</div>
+	</div>
+</body>
 </html>

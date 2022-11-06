@@ -1,5 +1,6 @@
+@import url(../darkstyle.css);
 /*共通*/
-th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
+th {text-align:center;white-space:nowrap;font-weight:normal;background-color:#6c7086;}
 th,td {vertical-align:top;white-space:nowrap;padding:2px;}
 thead {height:2.4em;}
 /*html,body {height:100%; overflow:hidden;} ツリーと共通なのでコメント*/
@@ -10,28 +11,28 @@ td {border-color:#c0c0c0;} /*FF,Operaの罫線対応*/
 #tree {height:99%;width:20%;overflow:scroll;float:left;white-space:nowrap;line-height:100%;}
 #tree small {font-size:60%;}
 #tree a {text-decoration:none;}
-#tree a:link,#tree a:visited {color:blue;}
-#tree a:hover {color:red;}
+#tree a:link,#tree a:visited {color:#89b4fa;}
+#tree a:hover {color:#f38ba8;}
 #tree a:active {color:black;}
-#tree span {padding:2px;color:blue;cursor:pointer;}
+#tree span {padding:2px;color:#89b4fa;cursor:pointer;}
 #t2L,#t3L,#t4L,#t5L,#t6L,#t7L,#t8L,#t9L,#t10L,#t11L,#t12L,#t13L,#t14L,#t15L {display:none;}
 #tree strong,td.new:first-line {font-weight:normal;color:crimson;} /*新防具*/
-#tree em {font-style: normal;color:darkred;font-size:80%} /*補足*/
+#tree em {font-style: normal;color:#eba0ac;font-size:80%} /*補足*/
 
 #bar {height:99%;width:3px;float:left;}
 #line {height:99%;width:3px;cursor:e-resize;background-color:gray;}
 #data {height:99%;width:78%;overflow: scroll;}
 
 input {font-size:60%;padding-right:2px;padding-left:2px;}
-.k {color:red;} /*キー素材*/
-table p {font-size:80%;color:red;} /*剛種武器*/
+.k {color:#f38ba8;} /*キー素材*/
+table p {font-size:80%;color:#f38ba8;} /*剛種武器*/
 td div {font-size:60%;margin-left:0.5em;} /*強化元先*/
 td div a {display:block;text-decoration: none;}
-td div a:link,td div A:visited {color:blue;}
-td div a:hover {color:red;}
+td div a:link,td div A:visited {color:#89b4fa;}
+td div a:hover {color:#f38ba8;}
 td div a:active {color:black;}
 b {font-size:80%;font-weight:normal;color:Navy;display:block;text-align:center;} /*GR*/
-s {font-size:80%;color:red;text-decoration:none;} /*説明欄*/
+s {font-size:80%;color:#f38ba8;text-decoration:none;} /*説明欄*/
 
 #b {width:84.0em} /*防具*/
 #c {width:57.0em} /*装飾品*/

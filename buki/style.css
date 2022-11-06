@@ -1,5 +1,7 @@
+@import url(../darkstyle.css);
+
 /*‹¤’Ê*/
-th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
+th {text-align:center;white-space:nowrap;font-weight:normal;background-color:#6c7086;}
 th,td {vertical-align:top;white-space:nowrap;padding:2px;}
 thead {height:2.4em;}
 html,body {height:100%; overflow:hidden;}
@@ -9,13 +11,13 @@ td {border-color:#c0c0c0;} /*FF,Opera‚ÌŒrü‘Î‰ž*/
 
 #tree {height:99%;width:20%;overflow:scroll;float:left;white-space:nowrap;line-height:100%;}
 #tree small {font-size:60%;}
-#tree em {display: inline;font-style: normal;color:darkred;font-size:60%} /*•â‘«*/
+#tree em {display: inline;font-style: normal;color:#eba0ac;font-size:60%} /*•â‘«*/
 #tree a {text-decoration:none;}
-#tree a:link,#tree a:visited {color:blue;}
+#tree a:link,#tree a:visited {color:#89b4fa;}
 #tree a.new:link,#tree a.new:visited,td.new:first-line {color:crimson;} /*V•Ší*/
-#tree a:hover {color:red;}
+#tree a:hover {color:#f38ba8;}
 #tree a:active {color:black;}
-#tree span,#top small span {padding:2px;color:blue;cursor:pointer;}
+#tree span,#top small span {padding:2px;color:#89b4fa;cursor:pointer;}
 #t2L,#t3L,#t4L,#t5L,#t6L,#t7L,#t8L,#t9L,#t10L,#t11L,#t12L,#t13L,#t14L,#t15L,#t16L,#t17L {display:none;}
 #t3L p,#t8L p {margin:0;}
 
@@ -24,16 +26,16 @@ td {border-color:#c0c0c0;} /*FF,Opera‚ÌŒrü‘Î‰ž*/
 #data {height:99%;width:79%;overflow: scroll;}
 
 input {font-size:60%;padding-right:2px;padding-left:2px;}
-.k {color:red;} /*ƒL[‘fÞ*/
-#data p {font-size:80%;color:red;margin-bottom:0;} /*„Ží•Ší*/
+.k {color:#f38ba8;} /*ƒL[‘fÞ*/
+#data p {font-size:80%;color:#f38ba8;margin-bottom:0;} /*„Ží•Ší*/
 #data td div {font-size:60%;margin-left:0.5em;} /*‹­‰»Œ³æ*/
 #data td div a {display:block;text-decoration: none;}
-#data td div a:link,#data td div A:visited {color:blue;}
-#data td div a:hover {color:red;}
+#data td div a:link,#data td div A:visited {color:#89b4fa;}
+#data td div a:hover {color:#f38ba8;}
 #data td div a:active {color:black;}
 b {font-size:80%;font-weight:normal;color:Navy;display:block;text-align:center;} /*GR*/
-s {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX‰ïS,à–¾—“*/
-#data q {color:red;font-size:73%;clear:left;display:block;quotes: "" ""} /*’HˆÙ*/
+s {color:#f38ba8;text-decoration:none;} /*ƒ}ƒCƒiƒX‰ïS,à–¾—“*/
+#data q {color:#f38ba8;font-size:73%;clear:left;display:block;quotes: "" ""} /*’HˆÙ*/
 #ken {width:64.0em;}
 #yumi {width:65.5em;}
 #gun {width:77.0em;}
@@ -82,11 +84,11 @@ s {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX‰ïS,à–¾—“*/
 /*ƒQ[ƒW—p*/
 #ken ul {margin:0;padding:1px 0;height:10px;font-size:1px;width:101px;list-style-type:none;background-color:slategray;}
 #ken li {float:left;height:10px;}
-#ken .r {background-color:red;}
+#ken .r {background-color:#f38ba8;}
 #ken .o {background-color:orange;}
-#ken .y {background-color:yellow;}
+#ken .y {background-color:#f9e2af;}
 #ken .g {background-color:lime;}
-#ken .b {background-color:blue;}
+#ken .b {background-color:#89b4fa;}
 #ken .w {background-color:white;}
 #ken .p {background-color:violet;}
 #ken .s {background-color:cyan;}
@@ -164,14 +166,14 @@ s {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX‰ïS,à–¾—“*/
 /*ƒKƒ“*/
 #gun ul {margin:0;padding:0;list-style-type:none;width:27.0em}
 #gun li {float:left;margin-right:0.2em;}
-u {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX’e*/
-i {font-style:normal;color:blue;clear:left;display:block;} /*ƒrƒ“‘¬ŽË*/
+u {color:#f38ba8;text-decoration:none;} /*ƒ}ƒCƒiƒX’e*/
+i {font-style:normal;color:#89b4fa;clear:left;display:block;} /*ƒrƒ“‘¬ŽË*/
 /*“J*/
-#ken .f {background-color:silver;}
-#ken .fr {color:red;}
-#ken .fb {color:blue;}
+#ken .f {background-color:#6c7086;}
+#ken .fr {color:#f38ba8;}
+#ken .fb {color:#89b4fa;}
 #ken .fw {color:white;}
-#ken .fy {color:yellow;}
+#ken .fy {color:#f9e2af;}
 #ken .fg {color:lime;}
 #ken .fa {color:aqua;}
 #ken .fp {color:fuchsia;}

@@ -1615,7 +1615,7 @@ case 5: //ライト
 					var tama = WP_Info.Bullet[this.c_tama.value];
 				} else { //圧縮あり
 					//圧縮時の能力変化
-					//tama.N = "<span style='color:blue'>" + tama.N + "</span>"
+					//tama.N = "<span style='color:#89b4fa'>" + tama.N + "</span>"
 					tama.P = tama.P * s / 10|0;
 					if (tama.ZP) tama.ZP = tama.ZP * s / 10|0;
 					if (tama.K) tama.C = (tama.C || "") + "<br>気絶" + (tama.K * s / 10|0);
@@ -1742,7 +1742,7 @@ case 5: //ライト
 			var eq = this.eq;
 			if (eq[I_aSOKUSYA].indexOf(tama.N) !== -1) {
 				//速射はダメージ半分
-				WP_Motion[0].C = (WP_Motion[0].C || "") + "<div style='color:blue'>" + tama.S + "</div>";
+				WP_Motion[0].C = (WP_Motion[0].C || "") + "<div style='color:#89b4fa'>" + tama.S + "</div>";
 				WP_Motion[0].H = 50;
 				if (WP_Motion[WP_Motion.length-1].N === "密着爆風") {
 					//爆風は1/10

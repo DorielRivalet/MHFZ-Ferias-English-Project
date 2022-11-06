@@ -1,0 +1,87 @@
+:root[data-theme="theme-light"] {
+  transition: color 300ms, background-color 300ms;
+	--primary-color: #5c5f77 !important;
+	--text-color: #4c4f69 !important;
+	--bg-color: #eff1f5 !important;
+	--component-bg-color: #e6e9ef !important;
+  --link: #1e66f5 !important;
+  --link-visited: #8839ef !important;
+  --link-hover: #7287fd !important;
+  --link-active: #209fb5 !important;
+}
+
+:root[data-theme="theme-dark"] {
+  transition: color 300ms, background-color 300ms;
+	--primary-color: #bac2de !important;
+	--text-color: #cdd6f4 !important;
+	--bg-color: #1e1e2e !important;
+	--component-bg-color: #181825 !important;
+  --link: #89b4fa !important;
+  --link-visited: #cba6f7 !important;
+  --link-hover: #b4befe !important;
+  --link-active: #74c7ec !important;
+}
+
+/* *{
+  background-color: #0072a3 !important;
+} */
+
+html{
+  transition: color 300ms, background-color 300ms;
+}
+
+/* unvisited link */
+a:link {
+  color: var(--link) !important;
+}
+
+/* visited link */
+a:visited {
+  color: var(--link-visited) !important;
+}
+
+/* mouse over link
+a:hover {
+  color: var(--link-hover) !important;
+}
+
+/* selected link 
+a:active {
+  color: var(--link-active) !important;
+} */
+
+body {
+  transition: color 300ms, background-color 300ms;
+  background-color: var(--bg-color) !important
+}
+.component {
+  transition: color 300ms, background-color 300ms;
+  background-color: var(--component-bg-color) !important;
+  color: var(--text-color) !important;
+  /* border: 1px solid var(--primary-color); */
+}
+
+h2 {
+  transition: color 300ms, background-color 300ms;
+  color: var(--primary-color) !important;
+}
+
+p {
+  color: var(--text-color) !important;
+}
+
+/* Helper CSS */
+/* body > div {
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  padding: 20px;
+} */
+
+/* .darkEdition {
+  background-color: #020c1b !important;
+}
+
+.lightEdition {
+  background-color: #ffffff !important;
+}
