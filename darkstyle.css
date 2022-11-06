@@ -118,6 +118,21 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;       /* roundness of the scroll thumb */
   /* border: 3px solid orange;  creates padding around scroll thumb */
 }
+
+div::-webkit-scrollbar {
+  width: 6px !important;               /* width of the entire scrollbar */
+  height: 6px !important;
+}
+
+div::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);        /* color of the tracking area */
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  /* border: 3px solid orange;  creates padding around scroll thumb */
+}
 /* mouse over link
 a:hover {
   color: var(--link-hover) !important;
